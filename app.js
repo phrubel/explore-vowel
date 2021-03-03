@@ -10,9 +10,10 @@ let vowelCounter = 0;
 
 
 // vowel counter function
-vowelCount.addEventListener("click", function () {
-  // console.log("click dise Mamai");
-  const textInput = textArea.value;
+// vowelCount.addEventListener("click", 
+function vowelCounts () {
+  console.log("click dise Mamai");
+  let textInput = textArea.value;
   textInput.innerText=' ';
 //   w is invisible word
   for (w of textInput) {
@@ -24,11 +25,14 @@ vowelCount.addEventListener("click", function () {
   }
 //   use String Template for showing Result field.
   result.innerText = `Your Word/Paragraph has= ${vowelCounter} vowels;`;
-});
+
+  
+};
 
 //  clear btn event handler
   clearBtn.addEventListener("click", () => {
-    // console.log("Mami Click marse ");
+    console.log("Mami Click marse ");
     textArea.value = "";
-    // result.value="";
+    result.value="";
+    vowelCounts()
 })
